@@ -100,6 +100,11 @@ class gDb {
         i++;
       }
       await _db.close();
+      // Aggiungi un ritardo di 3 secondi
+      Future.delayed(Duration(seconds: 3), () {
+        // Il codice qui verrà eseguito dopo un ritardo di 3 secondi
+        //print("Passati 3 secondi!");
+      });
       return result;
     }
 
@@ -120,6 +125,11 @@ class gDb {
         i++;
       }
       await _db.close();
+      // Aggiungi un ritardo di 3 secondi
+      Future.delayed(Duration(seconds: 3), () {
+        // Il codice qui verrà eseguito dopo un ritardo di 3 secondi
+        //print("Passati 3 secondi!");
+      });
       return result;
     }
     List<storicoSpese> resultnull = [];
@@ -229,6 +239,11 @@ class gDb {
     int? id=o.id;
     String sql="DELETE FROM tbconsegne WHERE id=$id";
     await database.execute(sql);
+    // Aggiungi un ritardo di 3 secondi
+    Future.delayed(Duration(seconds: 2), () {
+      // Il codice qui verrà eseguito dopo un ritardo di 3 secondi
+      //print("Passati 3 secondi!");
+    });
   }
 
   void deleteRowSpesa(storicoSpese o) async{
@@ -241,6 +256,11 @@ class gDb {
     int? id=o.id;
     String sql="DELETE FROM tbstoricoSpese WHERE id=$id";
     await database.execute(sql);
+    // Aggiungi un ritardo di 3 secondi
+    Future.delayed(Duration(seconds: 2), () {
+      // Il codice qui verrà eseguito dopo un ritardo di 3 secondi
+      //print("Passati 3 secondi!");
+    });
   }
 
   void insertConsegna(Consegne o) async {
@@ -360,6 +380,11 @@ class gDb {
       await txn.rawInsert(sql, params);
     });
     await database.close();
+    // Aggiungi un ritardo di 3 secondi
+    Future.delayed(Duration(seconds: 3), () {
+      // Il codice qui verrà eseguito dopo un ritardo di 3 secondi
+      //print("Passati 3 secondi!");
+    });
   }
 
   void insertImpostazionitbDati(ImpostazionitbDati i) async {
