@@ -386,7 +386,7 @@ class _SpeseSubpage2State extends State<SpeseSubpage2> {
             child: SizedBox(
               width: _bannerAd!.size.width.toDouble(),
               height: _bannerAd!.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAd!),
+              //child: AdWidget(ad: _bannerAd!), //per mettere banner
             )
         ),
         Container(

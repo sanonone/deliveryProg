@@ -65,30 +65,9 @@ class _SettingsPageState extends State<SettingsPage> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                /*ListTile(
-                  leading: Text("Orario ricerca [oggi]"),
-                  subtitle: Text("---"),
-                  trailing:  IconButton.filled(
-                    onPressed: () async {
-                      // Mostra il selettore di orario
-                        TimeOfDay? selectedTime = await showTimePicker(
-                        context: context,
-                        initialTime: TimeOfDay.now(), // Orario iniziale preselezionato
-                      );
 
-                      // Verifica se l'utente ha selezionato un orario
-                      if (selectedTime != null) {
-                        print('Orario selezionato: ${selectedTime.format(context)}');
-                      }
-                    },
-                    icon: Icon(Icons.access_time,color: Colors.orangeAccent,size: 30,),
-                    splashColor: Colors.orangeAccent,
-                    //child: Text('Orario'),
-                  ),
-                ),
-                 */
                 ListTile(
-                  leading: Text("Range ricerca [oggi]",style: TextStyle(fontWeight: FontWeight.bold),),
+                  leading: Text("Range ricerca\n[vedi oggi]",style: TextStyle(fontWeight: FontWeight.bold),),
                   subtitle: Text("Es: 9 per visualizzare tutte le consegne e spese effettuate nelle ultime 9 ore"),
                   trailing: DropdownButton<String>(
                     value: _selectedValue, // Valore attualmente selezionato

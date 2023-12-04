@@ -36,7 +36,7 @@ class _ContiPageState extends State<ContiPage> {
   late double _fondoCassa = 0.0;
   var formatter = DateFormat('dd/MM/yyyy HH:mm'); // Formato della data
   RewardedAd? _rewardedAd;
-  bool adVisto = false;
+  bool adVisto = true;
 
   // TODO: replace this test ad unit with your own ad unit.
   final adUnitId = Platform.isAndroid
@@ -395,6 +395,7 @@ class _ContiPageState extends State<ContiPage> {
                 },
                 child: Text('Seleziona Range di Date'),
               ),
+              /*
               Visibility(
                 visible: true,
                   child: TextButton(
@@ -405,6 +406,8 @@ class _ContiPageState extends State<ContiPage> {
                 },
                 child: const Text("Vedi il video per calcolare l'incasso"),
               )),
+
+               */
               Visibility(
                   visible: adVisto,
                   child: ElevatedButton(
